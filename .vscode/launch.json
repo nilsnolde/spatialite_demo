@@ -5,127 +5,14 @@
     "version": "0.2.0",
     "configurations": [    
         {
-            "name": "Test TomTom",
+            "name": "Test exe",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/valhalla_build_tomtom_traffic",
-            "args": ["-j", "1", "-o", "-c", "site/valhalla.json", "-d", "/home/nilsnolde/dev/gis-ops/traffic2valhalla/test/data/austria", "-t", "traffic_test"],
+            "program": "${workspaceFolder}/build/spatialite_demo",
+            "args": ["test-2.3.sqlite"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
             "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            //"preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "Build Tiles",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/valhalla_build_tiles",
-            "args": ["--config", "site/valhalla.json", "site/israel_cut.pbf"],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            //"preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "Test Index",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/test/tar_index",
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            //"preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "Run Service",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/valhalla_service",
-            "args": ["${workspaceFolder}/site/valhalla.json", "2"],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            //"preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "Test Avoid",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/test/gurka/gurka_avoids",
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            //"preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "Test Python",
-            "type": "cppdbg",
-            "externalConsole": false,
-            "args": ["-c", "\"from src.bindings.python import valhalla; valhalla.Configure('/home/nilsnolde/dev/cpp/valhalla/site/valhalla.json'); a = valhalla.Actor()\""],
-            "request": "launch",
-            "program": "/usr/bin/python",
-            "cwd": "${workspaceRoot}/build",
-            "environment": [],
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            //"preLaunchTask": "C/C++: g++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
